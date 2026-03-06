@@ -20,6 +20,7 @@ idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
 [dependencies]
 anchor-lang = { workspace = true, features = ["event-cpi"] }
 anchor-spl = { workspace = true, features = [] }
+solana-program = "2"
 const-crypto = "0.3.0"
 bytemuck = { workspace = true, features = ["min_const_generics"] }
 static_assertions = "1.1.0"

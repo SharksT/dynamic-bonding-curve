@@ -1,4 +1,4 @@
-#![allow(unexpected_cfgs)]
+#![allow(unexpected_cfgs, deprecated)]
 
 use anchor_lang::prelude::*;
 
@@ -209,6 +209,7 @@ pub mod dynamic_bonding_curve {
     }
 
     // migrate damm v2
+    #[allow(deprecated)]
     #[deprecated(
         since = "0.1.7",
         note = "It's unneeded. Will be removed in next release version"

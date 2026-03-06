@@ -1,4 +1,5 @@
 //! Event module includes information about events of the program
+#![allow(deprecated)]
 use anchor_lang::prelude::*;
 
 use crate::{

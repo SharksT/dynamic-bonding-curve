@@ -30,8 +30,10 @@ use crate::{
     u128x128_math::Rounding,
     utils_math::safe_mul_div_cast_u128,
     validate_vesting_parameters, DammV2DynamicFee, DammV2PodAlignedFeeMarketCapScheduler,
-    EvtCreateConfig, EvtCreateConfigV2, PoolError,
+    EvtCreateConfigV2, PoolError,
 };
+#[allow(deprecated)]
+use crate::EvtCreateConfig;
 
 #[derive(AnchorSerialize, AnchorDeserialize, Debug, Clone)]
 pub struct ConfigParameters {
@@ -535,6 +537,7 @@ pub struct CreateConfigCtx<'info> {
     pub system_program: Program<'info, System>,
 }
 
+#[allow(deprecated)]
 pub fn handle_create_config(
     ctx: Context<CreateConfigCtx>,
     config_parameters: ConfigParameters,
